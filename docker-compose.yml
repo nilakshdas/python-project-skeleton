@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  project:
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace
+    ports:
+      - "$JUPYTERLAB_PORT:$JUPYTERLAB_PORT"
+    build: .
